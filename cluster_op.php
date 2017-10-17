@@ -1,3 +1,7 @@
+<!--PHP Script for Clustering ... calls clustermaster.py which returns list of clusters-->
+<!--These are then parsed into an array which is displayed as HTML Panels-->
+
+
 <html>
 <head>
 <title>Gruppe - Clusters Found</title>
