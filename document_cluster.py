@@ -1,5 +1,5 @@
 import numpy as np
-from preprocess import form_dict
+from utils import form_dict
 from utils import calctfidf
 import random
 import warnings
@@ -28,8 +28,8 @@ def k_means(setd):
 				cluster_vector[j] = np.mean(cluster_alloc,axis=0)				
 	return cluster_assign	
 
-# doclist = [['d','b','c'],['c','c'],['c','b','d',],['c','c']]
-# print(k_means(doclist))
+doclist = [['the','man','school','college'],['woman','dress','party','food'],['child','university','fee','college'],['blast','gala','function','event','fun']]
+print(k_means(doclist))
 
 
 
