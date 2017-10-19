@@ -28,8 +28,8 @@ def k_means(setd):
 				cluster_vector[j] = np.mean(cluster_alloc,axis=0)				
 	return cluster_assign	
 
-doclist = [['the','man','school','college'],['woman','dress','party','food'],['child','university','fee','college'],['blast','gala','function','event','fun']]
-print(k_means(doclist))
+# doclist = [['the','man','school','college'],['woman','dress','party','food'],['child','university','fee','college'],['blast','gala','function','event','fun']]
+# print(k_means(doclist))
 
 
 
