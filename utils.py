@@ -3,8 +3,8 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk import word_tokenize
 import math
-
 import hashlib
+from functools import reduce
 
 def findtf(list1,  word):
 	return list1.count(word)/len(list1)
