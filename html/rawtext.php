@@ -1,7 +1,7 @@
 <style type="text/css">
     .textdiv1, .textdiv2{
         width: 47%;
-        height: 200px;
+        height: 350px;
         /*border: 2px solid blue;*/
         float: left;
         margin-left: 30px; 
@@ -27,7 +27,7 @@
     .rawtext{
         margin-top: 50px;
         width: 96%;
-        height : 350px;
+        height : 500px;
         margin-left: auto;
         margin-right: auto;
         border-bottom-style: solid;

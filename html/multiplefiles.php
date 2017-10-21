@@ -28,7 +28,7 @@
         /*display: inline-block;*/
         font-size: 16px;
         /*margin: 4px 2px;*/
-        -webkit-transition-duration: 0.4s; /* Safari */
+        -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
         cursor: pointer;
     }
