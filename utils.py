@@ -2,6 +2,7 @@ from collections import Counter
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk import word_tokenize
+from nltk import ngrams
 import math
 import hashlib
 from functools import reduce
@@ -35,7 +36,7 @@ def calctfidf(doclist, doc, word):
 
 
 def ngramize(a, n):
-	return list(map(lambda x: ''.join(x), list(nltk.ngrams(''.join(a), n))))
+	return list(map(lambda x: ''.join(x), list(ngrams(''.join(a), n))))
 	
 
 def hash_md5(a):
