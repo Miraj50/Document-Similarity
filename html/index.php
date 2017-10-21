@@ -139,7 +139,7 @@
 </div>
 <br>
 
-<iframe class="framei" name="frame"></iframe>
+<iframe class="framei" name="frame" frameBorder="0"></iframe>
 <!--  -->
 
 <!-- <div>
