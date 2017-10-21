@@ -26,7 +26,7 @@ def gen_output(t0, raw0, t1, raw1, weights, t, sb):
 		doca = gen_sent_blocks(raw0, sb)
 	else:
 		doca = raw0
-	yth
+	
 	if(t1 == 0):
 		docb = gen_sent_blocks(raw1, sb)
 	else:
@@ -48,7 +48,7 @@ def gen_output(t0, raw0, t1, raw1, weights, t, sb):
 	for elem in indices:
 		e0 = elem[0]
 		e1 = elem[1]
-		outlist.append([e0, doca[e0] + '^' + doca[e0+1] + '^' + doca[e0+2], e1, doca[e1] + '^' + doca[e1+1] + '^' + doca[e1+2]])
+		outlist.append(e0, doca[e0] + '^' + doca[e0+1] + '^' + doca[e0+2], e1, doca[e1] + '^' + doca[e1+1] + '^' + doca[e1+2])
 	return outlist
 	
 

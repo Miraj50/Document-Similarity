@@ -30,7 +30,7 @@ weights = [0.2, 0.3, 0.4, 0.1]
 thresh = 1.3
 sblock = 4
 
-outlist = [typ0, typ1, doclist[0][7:], doclist[1][7:]]
-outlist.extend(two.gen_output(typ0, raw0, typ1, raw1, weights, thresh, sblock))
+outlist = two.gen_output(typ0, raw0, typ1, raw1, weights, thresh, sblock)
 
-json.dump(outlist)
+flag.extend(outlist)
+json.dump(flag)

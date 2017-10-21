@@ -49,29 +49,46 @@
 <div class="col-sm-2"></div>
 <div class="col-sm-8">
 <?php
-$op = shell_exec(escapeshellcmd("/usr/bin/python /var/www/test.py"));
+session_start();
+$url1 = $_SESSION['url1'];
+$url2 = $_SESSION['url2'];
+if($url1 == "") {
+  $op = passthru("/usr/bin/python /var/www/twodocmaster.py"));
+}
+elseif ($url2 == "") {
+  $op = passthru("/usr/bin/python /var/www/twodocmaster.py " . $urll);
+}
+else{
+  $op = passthru("/usr/bin/python /var/www/twodocmaster.py " . $url1 . " " . $url2);
+}
 $arr = json_decode($op);
 //var_dump($arr);
 $file = fopen("./reports/report_twodoc.txt", "w");
 fwrite($file, "Blocks of similar text: \n\n");
 echo '<div class="table-responsive"><table class="table">';
-echo '<thead><tr><th>' . $arr[1] . '</th><th>' . $arr[2] . '</th></tr></thead><tbody>';
+echo '<thead><tr><th>' . $arr[2] . '</th><th>' . $arr[3] . '</th></tr></thead><tbody>';
 if ($arr[0] == 0) {
-  $part = "In Paragraph/Section: ";
+  $part0 = "In Paragraph/Section: ";
 }
 elseif ($arr[0] == 1) {
-  $part = "On Line: "
+  $part0 = "On Line: "
 }
-foreach(array_slice($arr, 3) as $key=>$para){
+if ($arr[1] == 0) {
+  $part1 = "In Paragraph/Section: ";
+}
+elseif ($arr[1] == 1) {
+  $part1 = "On Line: "
+}
+foreach(array_slice($arr, 4) as $key=>$para){
 	$one = explode('^', $para[1]);
 	$two = explode('^', $para[3]);
 	echo '<tr><td><div class="panel panel-default">';
 	fwrite($file, $key . ".\n");
-  echo '<div class="panel-heading">' . $part . $para[0] . '</div><div class="panel-body">' . $one[0] . '<mark>' . $one[1] . '</mark>' . $one[2] . '</div>'; 
-  fwrite($file, $part . $para[0] ."\n". $para[1] . "\n\n");
+  echo '<div class="panel-heading">' . $part0 . $para[0] . '</div><div class="panel-body">' . $one[0] . '<mark>' . $one[1] . '</mark>' . $one[2] . '</div>'; 
+  fwrite($file, $part0 . $para[0] ."\n". $para[1] . "\n\n");
   echo '</div></td><td><div class="panel panel-default">';
-	echo '<div class="panel-heading">' . $part . $para[2] . '</div><div class="panel-body">' . $two[0] . '<mark>' . $two[1] . '</mark>' . $two[2] . '</div>';
-	fwrite($file, $part . $para[2] ."\n". $para[3] . "\n\n\n");
+	echo '<div class="panel-heading">' . $part1 . $para[2] . '</div><div class="panel-body">' . $two[0] . '<mark>' . $two[1] . '</mark>' . $two[2] . '</div>';
+	fwrite($file, $part1 . $para[2] ."\n". $para[3] . "\n\n\n");
   echo '</div></td></tr>';
 }
 echo '</tbody></table></div>';

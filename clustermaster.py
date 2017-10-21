@@ -19,7 +19,7 @@ n = len(doclist)
 
 pathlist = ["./uploads/" + filen for filen in doclist]
 
-documents = [ext.function(path) for path in pathlist]
+documents = [ext.textextract(path, 0) for path in pathlist]
 
 clusters = clu.kmeans(documents)
 clusters = [[doclist[i], cluster[i]] for i in range(n)]
