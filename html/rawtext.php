@@ -61,7 +61,7 @@
     <div class="rawtext">
         <h3 class="insidetwofile"><u>Raw Text</u></h3>
 
-        <form method="post" action="textbox.php">
+        <form method="post" action="upload.php">
             <div class="textdiv1">
                 <!-- <form method="post" action="textbox.php"> -->
                 <textarea class="txt1" name="textbox1" placeholder="Enter text..."></textarea>
@@ -71,7 +71,7 @@
                <!--  <form method="post" action="textbox.php"> -->
                 <textarea class="txt1" name="textbox2" placeholder="Enter text..."></textarea>
             </div>
-            <input class="rawtextupload" type="submit" value="Upload" />  
+            <input class="rawtextupload" type="submit" name="rawtextbtn" value="Upload" />  
         </form>
     </div>
 </body>

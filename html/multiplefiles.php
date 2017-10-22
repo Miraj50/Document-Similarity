@@ -42,11 +42,11 @@
 <body>
     <div class="mulfile">
         <h3  class="insidetwofile"><u>Upload Multiple Files (Zipped/Tarball)</u></h3>
-        <form  class="insidetwofile" action="cluster_op.php" method="post" enctype="multipart/form-data">
+        <form  class="insidetwofile" action="upload.php" method="post" enctype="multipart/form-data">
         Select FILES to upload : 
-        <input type="file" name="UploadFiles" id="UploadFiles">
+        <input type="file" name="Uploadmulfiles" id="Uploadmulfiles">
         <br><br>
-        <input type="submit" name="submit" value="Upload">
+        <input type="submit" name="mulfilebtn" value="Upload">
         </form>
     </div>
     

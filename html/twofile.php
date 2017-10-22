@@ -58,7 +58,7 @@
                     <input type="file" name="UploadFileName2" id="UploadFileName2">
                 </div>
                 <br>
-                <input class="twofileupload" type="submit" name="submit" value="Upload">
+                <input class="twofileupload" type="submit" name="twofilebtn" value="Upload">
                 
             </form>
         </div>

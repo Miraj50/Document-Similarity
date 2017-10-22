@@ -68,7 +68,7 @@
                 <textarea class="txt1" name="url2" placeholder="Enter URL(2)..."></textarea>
                 <!-- <br> -->
             </div><br><br>
-            <input class="urlupload" type="submit" value="Upload" />  
+            <input class="urlupload" type="submit" name="urlsbtn" value="Upload" />  
         </form>
     </div>
 </body>
