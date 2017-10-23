@@ -78,6 +78,7 @@
         padding: 8px 16px;
         text-align: center;
         text-decoration: none;
+        /*display: inline-block;*/
         font-size: 16px;
         /*margin: 4px 2px;*/
         -webkit-transition-duration: 0.4s;
@@ -91,10 +92,7 @@
 
 
     .topnav {
-      width: 35%;
-      text-align: center;
-      padding-left: 5px;
-      padding-right: 5px;
+      width: 34.65%;
       overflow:hidden;
       background-color: #333;
       margin-left: auto;
@@ -112,13 +110,6 @@
       border-right:2px solid #bbb;
     }
 
-    .active, .act{
-       border-top-left-radius:15px;
-       border-bottom-left-radius:15px;
-       border-top-right-radius:15px;
-       border-bottom-right-radius:15px;
-    }
-
     .topnav a:hover {
       background-color: #ddd;
       color: black;
@@ -129,32 +120,26 @@
         color: white;
     }
     .framei{
-        /*height: 100%;*/
+        height: 500px;
         width: 100%;
     }
 
    
 </style>
 
-<script>
-  function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight+10 + 'px';
-  }
-</script>
-
 <h1 style="text-align: center;"><u><i>DOCUMENT SIMILARITY ANALYSIS</i></u></h1>
 
 <!--  -->
 <div class="topnav">
   <a class="active">Home</a>
-  <a class="act" href='twofile.php' target="frame">2 Files</a>
-  <a class="act" href="multiplefiles.php" target="frame">Multiple Files</a>
-  <a class="act" href="urlsframe.php" target="frame">URL's</a>
-  <a class="act" href="rawtext.php" target="frame">Raw Text</a>
+  <a href='twofile.php' target="frame">2 Files</a>
+  <a href="multiplefiles.php" target="frame">Multiple Files</a>
+  <a href="urlsframe.php" target="frame">URL's</a>
+  <a href="rawtext.php" target="frame">Raw Text</a>
 </div>
 <br>
 
-<iframe class="framei" name="frame" frameborder="0" onload="resizeIframe(this)"></iframe>
+<iframe class="framei" name="frame"></iframe>
 <!--  -->
 
 <!-- <div>
