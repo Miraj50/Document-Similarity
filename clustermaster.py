@@ -21,12 +21,12 @@ pathlist = ["./uploads/" + filen for filen in doclist]
 
 documents = [ext.textextract(path, 0) for path in pathlist]
 
-clusters = clu.kmeans(documents)
-clusters = [[doclist[i], cluster[i]] for i in range(n)]
+clusters = clu.k_means(documents)
+clusters = [[doclist[i], clusters[i]] for i in range(n)]
 
 keys = list(map(lambda x:x[1], clusters))
 newlist = [[y[0] for y in clusters if y[1]==x] for x in keys]
 
-json.dump(newlist)
+json.dumps(newlist)
 
 
