@@ -7,6 +7,7 @@ from utils import preprocess
 from collections import Counter
 
 def k_means(setd):
+	setd = preprocess([" ".join(y) for y in setd])
 	num_cluster = 2
 	word_dict = form_dict(setd)
 	inp_vector = np.zeros((len(setd),len(word_dict)))
