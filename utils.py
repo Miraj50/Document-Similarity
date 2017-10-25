@@ -52,7 +52,8 @@ def preprocess(inp):
 	return step3
 
 def tokenize_input(inp):
-	tok_inp = list(map(lambda x: word_tokenize(x),inp))
+	# tok_inp = list(map(lambda x: word_tokenize(x),inp))
+	tok_inp = [x.split() for x in inp]
 	return tok_inp
 
 def form_dict(inp):
@@ -65,8 +66,13 @@ def lower_case(inp):
 	return lower_rem_inp
 
 def stop_word_rem(inp):
-	all_words = set(stopwords.words('english'))
-	all_words.update(['.','"',"'",'?',',',':',';',')','(','}','{',']','['])
+	# all_words = set(stopwords.words('english'))
+	# all_words.update(['.','"',"'",'?',',',':',';',')','(','}','{',']','['])
+	all_words = {"the","a","and","any","are","as","at","be","an","by","for","from","has","he","in","is","it","its","of"\
+				,"on","that","to","was","were","will","with","do","does","his","her","here","how","i","me","my","no",\
+				"not","or","other","our","out","same","she","should","so","some","than","them","then","there","these","this",\
+				"we","were","what","when","where","which","who","why","you","your",	'.','"',"'",'?',',',':',';',')','(','}','{',']','['\
+				}
 	def fmap(x):
 		y = [w for w in x.split() if w not in all_words]
 		ans = ' '.join(y)
@@ -84,6 +90,7 @@ def	stemming(inp):
 	return stem_inp
 
 	
-
+# a = ["asas sd ada sahe","asadse"]
+# print(stop_word_rem(a))
 
 
