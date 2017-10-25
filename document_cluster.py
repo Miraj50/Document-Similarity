@@ -40,6 +40,6 @@ def k_means(setd):
 	cluster_list = Counter(map(tuple,cluster_master))
 	cluster_final = cluster_list.most_common(1) 
 	
-	return list(list(cluster_final[0])[0]),num_cluster
+	return list(list(cluster_final[0])[0])
 
 # print(k_means(a))
