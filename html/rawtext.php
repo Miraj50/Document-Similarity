@@ -25,9 +25,9 @@
         margin-top: 25px;   
     }
     .rawtext{
-        margin-top: 50px;
-        width: 96%;
-        height : 500px;
+        margin-top: 20px;
+        width: 95%;
+        height : 480px;
         margin-left: auto;
         margin-right: auto;
         border-bottom-style: solid;

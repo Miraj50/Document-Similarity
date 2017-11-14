@@ -14,7 +14,7 @@
     }
     .urls{
         margin-top: 50px    ;
-        width: 96%;
+        width: 95%;
         margin-left: auto;
         margin-right: auto;
         border-bottom-style: solid;
@@ -28,10 +28,11 @@
     .insidetwofile{
         margin-left: 30px;
     }
-    textarea{
-        font-size: 15px;
+    input[type=url]{
+        /*font-size: 15px;*/
         width: 100%;
         height: 100%;
+        resize: none;
     }
     input[type=submit] {
         background-color: #008CBA; 
@@ -61,11 +62,11 @@
 
         <form method="post" action="url.php">
             <div class="urldiv1">
-                <textarea class="txt1" name="url1" placeholder="Enter URL(1)..."></textarea>
+                <input type="url" class="txt1" name="url1" placeholder="Enter URL(1)...">
                 <!-- <br> -->
             </div>
             <div class="urldiv2">
-                <textarea class="txt1" name="url2" placeholder="Enter URL(2)..."></textarea>
+                <input type="url" class="txt1" name="url2" placeholder="Enter URL(2)...">
                 <!-- <br> -->
             </div><br><br>
             <input class="urlupload" type="submit" name="urlsbtn" value="Upload" />  

@@ -1,3 +1,9 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
    /* .textdiv1, .textdiv2{
         width: 47%;
@@ -91,31 +97,33 @@
 
 
     .topnav {
-      width: 35%;
+      width: 30%;
       text-align: center;
-      padding-left: 5px;
-      padding-right: 5px;
-      overflow:hidden;
+      padding-left: 10px;
+      padding-right: 0px;
+      overflow: hidden;
       background-color: #333;
       margin-left: auto;
-      margin-right: auto
+      margin-right: auto;
+      white-space: nowrap;
     }
 
     .topnav a {
       float: left;
-      display: block;
+      display: inline-block;
       color: #f2f2f2;
       text-align: center;
-      padding: 14px 16px;
+      padding: 8px 10px;
       text-decoration: none;
       font-size: 17px;
       border-right:2px solid #bbb;
+      outline: none;
     }
 
     .active, .act{
-       border-top-left-radius:15px;
+       /*border-top-left-radius:15px;*/
        border-bottom-left-radius:15px;
-       border-top-right-radius:15px;
+       /*border-top-right-radius:15px;*/
        border-bottom-right-radius:15px;
     }
 
@@ -128,12 +136,60 @@
         background-color: #4CAF50;
         color: white;
     }
-    .framei{
+    #framei{
         /*height: 100%;*/
         width: 100%;
     }
 
-   
+
+
+    .dropdown {
+        margin-left: 10px; 
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        font-size: 17px;    
+        border: none;
+        outline: none;
+        color: white;
+        padding: 8px 10px;
+        background-color: inherit;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        /*padding: 12px 16px;*/
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
 </style>
 
 <script>
@@ -146,15 +202,25 @@
 
 <!--  -->
 <div class="topnav">
-  <a class="active">Home</a>
-  <a class="act" href='twofile.php' target="frame">2 Files</a>
-  <a class="act" href="multiplefiles.php" target="frame">Multiple Files</a>
-  <a class="act" href="urlsframe.php" target="frame">URL's</a>
-  <a class="act" href="rawtext.php" target="frame">Raw Text</a>
+    <a class="active" href="homeintro.php" target="frame">Home</a>
+    <div class="dropdown act">
+        <button class="dropbtn">Two Documents 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a class="act" href='twofile.php' target="frame">2 Files</a>
+            <a class="act" href="urlsframe.php" target="frame">URL's</a>
+            <a class="act" href="rawtext.php" target="frame">Raw Texts</a>
+            <a class="act" href="fileandurl.php" target="frame">1 File & URL</a>
+            <a class="act" href="fileandtext.php" target="frame">1 File & Raw Text</a>
+            <a class="act" href="urlandtext.php" target="frame">URL & Raw Text</a>
+        </div>
+    </div>
+    <a class="act" href="multiplefiles.php" target="frame">Multiple Documents</a>
 </div>
 <br>
 
-<iframe class="framei" name="frame" frameborder="0" onload="resizeIframe(this)"></iframe>
+<iframe id="framei" name="frame" frameborder="0" onload="resizeIframe(this)" src="homeintro.php"></iframe>
 <!--  -->
 
 <!-- <div>
